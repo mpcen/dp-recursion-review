@@ -4,66 +4,6 @@ price of a rod of length i. Find the MAXIMUM total revenue you can
 make by cutting and selling the rod.
 */
 
-const prices = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 function revenues(n, prices) {
     if (n === 0) return 0;
 
@@ -80,4 +20,3 @@ function revenues(n, prices) {
 
 const prices = [1, 5, 8, 9, 10];
 console.log(revenues(prices.length, prices));
-*/
