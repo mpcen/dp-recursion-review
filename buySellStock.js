@@ -23,3 +23,21 @@ function naive(prices) {
     return profit;
 }
 
+// Optimized O(n) solution
+function optimized(prices) {
+    let minSoFar = prices[0];
+    let minPricesOnDay = [minSoFar];
+    let profit = 0;
+    
+    for(let i = 1; i < prices.length; i++) {
+        if(prices[i] < minSoFar)minSoFar = prices[i];
+        minPricesOnDay[i] = minSoFar;
+    }
+
+    for(let i = 0; i < prices.length; i++) {
+        let curr = prices[i] - minPricesOnDay[i];
+        if(curr > profit) profit = curr;
+    }
+
+    return profit;
+};
