@@ -28,9 +28,17 @@ function optimized(prices) {
     let minSoFar = prices[0];
     let minPricesOnDay = [minSoFar];
     let profit = 0;
-    
+
+    /**
+     *  prices = [8, 1, 2, 4, 6, 3]
+     *               i
+     *  minSoFar = 1
+     *  minPricesOnDay = [0,1,1,1,1,1]
+     * 
+     * loop though minPricesOnDay array and get difference for profit
+     */
     for(let i = 1; i < prices.length; i++) {
-        if(prices[i] < minSoFar)minSoFar = prices[i];
+        if(prices[i] < minSoFar) minSoFar = prices[i];
         minPricesOnDay[i] = minSoFar;
     }
 
